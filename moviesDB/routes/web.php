@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/','MoviesController@index');
+
+Route::get('/movies/detallePelicula/{id}','MoviesController@show');
