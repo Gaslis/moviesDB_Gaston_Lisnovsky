@@ -3,16 +3,12 @@
     <div class=" col-sm-4 col-md-3">
       <a href="/home">
         <img src="/img/logo-graficar.png" alt="" class="logo">
-        {{-- <img src="/img/logo-circulo.png" alt="" class="logoCirculo">col-3 --}}
       </a>
     </div>
   <div class="col-6 col-sm-5 col-md-7 mb-3">
     <form class="pt-3" action="/products/buscarProducto" method="GET">
       <div class="input-group">
         <input type="text" class="form-control searchRedondo" name="busqueda" value="" placeholder="Encontra los productos que estas buscando...">
-      <!-- <div class="input-group-prepend">
-        <span class="input-group-text searchRedondo" id="addon-wrapping"><ion-icon name="search"></ion-icon></span>
-      </div> Encontra los productos que estas buscando...-->
       </div>
     </form>
   </div>
