@@ -3,17 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Movie;
+use App\Genre;
+use App\Actor;
 
 class MoviesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+      $peliculas = Movie::paginate(8);
+      return view('movies.listadoPeliculas')->with('peliculas',$peliculas);
     }
 
     /**

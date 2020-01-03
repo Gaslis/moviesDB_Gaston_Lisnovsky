@@ -1,7 +1,7 @@
 @include('../partials.head')
 @include('../partials.header')
-@yield('carousel')
+{{-- @yield('carousel') --}}
 @yield('aside')
 @yield('content')
-@yield('banner')
+{{-- @yield('banner') --}}
 @include('../partials.footer')

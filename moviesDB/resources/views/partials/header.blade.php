@@ -38,34 +38,31 @@
 
       <a href="{{ route('register') }}">Registrate  <ion-icon name="create"></ion-icon></a>
     @endauth
-    {{-- @foreach ($categorias as  $categoria)
-    <a class="dropdown-item" href="/products/listadoXcategoria/{{ $categoria->id }}">{{ $categoria->name }}</a>
-    @endforeach --}}
   </div>
-  @auth
+  {{-- @auth
     <a href="/carrito/index/">
       <button type="submit" class="btn botonChango"><ion-icon name="cart"></ion-icon><span class="badge badge-light">
         {{$carts->sum('cantidad')}}
       </span>
         <span class="sr-only badge">unread messages</span>
       </button>
-      {{-- <button type="submit" class="btn botonChango"><ion-icon name="cart"></ion-icon></button> --}}
+
     </a>
     @else
       <a href="/home">
         <button type="submit" class="btn botonChango"><ion-icon name="cart"></ion-icon></button>
       </a>
-    @endauth
+    @endauth --}}
 </div>
   </nav>
   <div class="row barraRoja py-1">
     <nav class="col-6 primerNav">
       <a href="mailto: info@graficar.com.ar"><ion-icon name="mail"></ion-icon> contacto@graficar.com</a>
-      @if(Auth::id()===1)
+      {{-- @if(Auth::id()===1) --}}
         <a href="/administrarProducto"><ion-icon name=""></ion-icon>Administrar Productos</a>
-      @else
+      {{-- @else
       <a href="/products/formularioContacto"><ion-icon name="call"></ion-icon> (011) 15 4054 6753</a>}
-      @endif
+      @endif --}}
     </nav>
     <nav class="col-6 segundoNav">
         @auth
