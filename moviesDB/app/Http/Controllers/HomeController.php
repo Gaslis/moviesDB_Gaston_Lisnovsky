@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Movie;
+use App\Genre;
+use App\Actor;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+      $peliculas = Movie::paginate(8);
+      return view('welcome')->with('peliculas',$peliculas);;
     }
 }

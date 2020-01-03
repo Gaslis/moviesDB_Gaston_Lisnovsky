@@ -6,9 +6,9 @@
       </a>
     </div>
   <div class="col-6 col-sm-5 col-md-7 mb-3">
-    <form class="pt-3" action="/products/buscarProducto" method="GET">
+    <form class="pt-3" action="/products/buscarPelicula" method="GET">
       <div class="input-group">
-        <input type="text" class="form-control searchRedondo" name="busqueda" value="" placeholder="Encontra los productos que estas buscando...">
+        <input type="text" class="form-control searchRedondo" name="busqueda" value="" placeholder="Encontra la pelicula...">
       </div>
     </form>
   </div>
