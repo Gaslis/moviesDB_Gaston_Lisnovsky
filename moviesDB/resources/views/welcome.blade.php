@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+@extends('layouts.plantilla')
+@section('content')
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -77,7 +79,7 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
 
             <div class="content">
                 <div class="title m-b-md">
@@ -97,3 +99,5 @@
         </div>
     </body>
 </html>
+
+@endsection
