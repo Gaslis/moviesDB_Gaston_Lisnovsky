@@ -15,69 +15,54 @@ class MoviesController extends Controller
       $genres = Genre::all();
       return view('welcome')->with('peliculas',$peliculas)->with('genres',$genres);
     }
+    public function listaP()
+    {
+      $peliculas = Movie::paginate(12);
+      return view('movies.listaPeliculas')->with('peliculas',$peliculas);
+    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
       $pelicula = Movie::find($id);
       return view('movies.detallePelicula')->with('pelicula',$pelicula);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+      $peliculaEditar = Movie::find($id);
+      $generos = Genre::all();
+      // $generoEditada = Genre::find($peliculaEditar->categoria_id) ,'generoEditada';
+      return view('movies.editarPelicula', compact('peliculaEditar', 'generos'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+      $peliculaEditar = Movie::find($id);
+      $peliculaEditar->title = $request->input('title');
+      $peliculaEditar->rating = $request->input('rating');
+      $peliculaEditar->awards = $request->input('awards');
+      $peliculaEditar->genre_id = $request->input('genre_id');
+
+      // if ($request->hasFile('poster')) {
+      //   $ruta =  $request->file('poster')->store('public');
+      //   $nombreArchivo = basename($ruta);
+      //   $productoEditar->poster = $nombreArchivo;
+      // }
+
+      $peliculaEditar->update();
+      return redirect('/movies/listaPeliculas');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

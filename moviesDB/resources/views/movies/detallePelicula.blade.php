@@ -16,22 +16,22 @@
             @foreach ($pelicula->actors as $actor)
               <p>{{$actor->first_name}} {{$actor->last_name}} </p>
             @endforeach
-            <p>{{$pelicula->id}}</p>
-            <p>{{$pelicula->genre->name}}</p>
+            <p></p>
+            <p></p>
             {{-- <div title="You have selected this product to be shipped in the color yellow." style="top: 0" class="color yellow"></div>
             <div style="top: 43px" class="type small">XXL</div> --}}
         </div>
 
         <footer class="content">
             {{-- <span class="qt-minus">-</span> --}}
-            {{-- <span class="qt ml-2">
-               ${{$producto->precio}}</span> --}}
+            <span class="qt ml-2">
+               {{$pelicula->genre->name}}</span>
             {{-- <span class="qt-plus">+</span> --}}
             <h2 class="full-price">
-              <form class="" action="/carrito/agregar" method="post">
+              <form class="" action="/" method="get">
               @csrf
-                {{-- <input type="hidden" name="id" value="{{$producto->id}}"> --}}
-                <button type="submit" class="btn btn-primaryF pb-3" name="button">Agregar al Carrito</button>
+                {{-- <input type="hidden" name="id" value="{{$pelicula->id}}"> --}}
+                <button type="submit" class="btn btn-primaryF pb-3" name="button">Volver</button>
               </form>
             </h2>
 
