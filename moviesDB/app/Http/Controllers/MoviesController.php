@@ -53,11 +53,11 @@ class MoviesController extends Controller
       $peliculaEditar->awards = $request->input('awards');
       $peliculaEditar->genre_id = $request->input('genre_id');
 
-      // if ($request->hasFile('poster')) {
-      //   $ruta =  $request->file('poster')->store('public');
-      //   $nombreArchivo = basename($ruta);
-      //   $productoEditar->poster = $nombreArchivo;
-      // }
+      if ($request->hasFile('poster')) {
+        $ruta =  $request->file('poster')->store('public');
+        $nombreArchivo = basename($ruta);
+        $peliculaEditar->poster = $nombreArchivo;
+      }
 
       $peliculaEditar->update();
       return redirect('/movies/listaPeliculas');

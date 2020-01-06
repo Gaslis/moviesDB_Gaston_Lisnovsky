@@ -31,17 +31,17 @@
                  <label for="generos">Genero</label>
                  <select class="form-control" name="genre_id" id="genre_id">
 
-                        <option value="{{$peliculaEditar->genre_id }}" >{{$peliculaEditar->genre->name }}</option>
+                        <option value="{{$peliculaEditar->genre_id }}" >{{$peliculaEditar->genre->name ?? ''}}</option>
                         @foreach ($generos as $genero)
                             <option value="{{$genero->id}}">{{$genero->name}}</option>
                         @endforeach
                     </select>
 
              </div>
-             {{-- <div class="">
+             <div class="">
                <label for="">Subir poster del producto</label>
                <input type="file" name="poster" value="">
-             </div> --}}
+             </div>
              <button type="submit" class="btn btn-primary">Actualizar Producto</button>
         </form>
      </div>

@@ -7,8 +7,7 @@
 
     <article class="product pt-5">
         <header>
-          {{-- /storage/{{$producto->poster}} --}}
-          <img src="" alt="">
+          <img src="/storage/{{$pelicula->poster}}" alt="">
         </header>
 
         <div class="content">
@@ -25,7 +24,7 @@
         <footer class="content">
             {{-- <span class="qt-minus">-</span> --}}
             <span class="qt ml-2">
-               {{$pelicula->genre->name}}</span>
+               {{$pelicula->genre->name ?? ''}}</span>
             {{-- <span class="qt-plus">+</span> --}}
             <h2 class="full-price">
               <form class="" action="/" method="get">

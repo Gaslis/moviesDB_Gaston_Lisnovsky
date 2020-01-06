@@ -1,16 +1,16 @@
 <header>
   <nav class="col 12 navbar navbar-light p-3">
     <div class=" col-sm-4 col-md-3">
-      <a href="/home">
-        <img src="/img/logo-graficar.png" alt="" class="logo">
+      <a href="/" class="btn"> movieDB
+        {{-- <img src="/img/logo-graficar.png" alt="" class="logo"> --}}
       </a>
     </div>
   <div class="col-6 col-sm-5 col-md-7 mb-3">
-    <form class="pt-3" action="/products/buscarPelicula" method="GET">
+    {{-- <form class="pt-3" action="/products/buscarPelicula" method="GET">
       <div class="input-group">
         <input type="text" class="form-control searchRedondo" name="busqueda" value="" placeholder="Encontra la pelicula...">
       </div>
-    </form>
+    </form> --}}
   </div>
   <div class="dropdown col-6 col-sm-3 col-md-2">
   <button type="button" class="btn btn-primary dropdown-toggle botonMenu menuMedia" data-toggle="dropdown">
@@ -57,9 +57,9 @@
   </nav>
   <div class="row barraRoja py-1">
     <nav class="col-6 primerNav">
-      <a href="mailto: info@graficar.com.ar"><ion-icon name="mail"></ion-icon> contacto@graficar.com</a>
+      {{-- <a href="mailto: info@graficar.com.ar"><ion-icon name="mail"></ion-icon> contacto@graficar.com</a> --}}
       {{-- @if(Auth::id()===1) --}}
-        <a href="/administrarProducto"><ion-icon name=""></ion-icon>Administrar Productos</a>
+        {{-- <a href="/administrarProducto"><ion-icon name=""></ion-icon>Administrar Productos</a> --}}
       {{-- @else
       <a href="/products/formularioContacto"><ion-icon name="call"></ion-icon> (011) 15 4054 6753</a>}
       @endif --}}

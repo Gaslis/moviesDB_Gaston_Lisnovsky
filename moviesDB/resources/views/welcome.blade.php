@@ -10,7 +10,7 @@
       @foreach ($peliculas as $pelicula)
 
         <div class="card venta col-12 col-sm-6 col-md-3 tarjetasSinborde pt-2" style=""><a href="/movies/detallePelicula/{{ $pelicula->id }}" class="btn3">
-          {{-- <img src="/storage/{{$pelicula->poster}}" class="card-img-top" alt="..." width="300" height="210"> --}}
+          <img src="/storage/{{$pelicula->poster}}" class="card-img-top" alt="..." width="" height="300">
           <div class="card-body">
             <h5 class="card-title"><p>{{ $pelicula->title }}</p></h5>
             {{-- <p class="card-text"><p>{{ $producto->descripcion }}</p></p> --}}
