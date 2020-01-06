@@ -11,7 +11,7 @@
             <th>Nombre</th>
             <th>Ver</th>
             <th>Editar</th>
-            <th>Eliminar</th>
+            {{-- <th>Eliminar</th> --}}
         </tr>
         </thead>
         <tbody>
@@ -22,7 +22,7 @@
                 <td>{{$value->title}}</td>
                 <td><a href="/movies/detallePelicula/{{$value->id}}"><ion-icon name="eye"></ion-icon></a></td>
                 <td><a href="/movies/editarPelicula/{{$value->id}}"><ion-icon name="create"></ion-icon></a></td>
-                <td><a href="/movies/eliminarPelicula/{{$value->id}}"><ion-icon name="trash"></ion-icon></td></a>
+                {{-- <td><a href="/movies/eliminarPelicula/{{$value->id}}"><ion-icon name="trash"></ion-icon></td></a> --}}
                 </tr>
 
             @endforeach

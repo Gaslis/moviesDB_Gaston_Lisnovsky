@@ -9,12 +9,12 @@
               <article class="product">
                   <header>
 
-                      <a href="/products/detalleProducto/{{$movie->id}}">
+                      <a href="/movies/detallePelicula/{{$movie->id}}">
 
                         {{-- <input type="hidden" name="id" value="{{$cart->id}}">
                         <button type="submit" class="btn btn-primary" name="button">Eliminar</button> --}}
                           <img src="/storage/{{$movie->poster}}" alt="">
-                          <h3>Ver producto</h3>
+                          <h3>Ver detalle</h3>
                       </a>
                   </header>
 
@@ -36,9 +36,9 @@
 
                       </h2>
 
-                      <h2 class="price">Precio: $
+                      {{-- <h2 class="price">Precio: $ --}}
                         {{-- {{$producto->precio}} --}}
-                      </h2>
+                      {{-- </h2> --}}
                   </footer>
                 {{-- @empty
                   <h2>Su carrito se encuentra vacio</h2> --}}
