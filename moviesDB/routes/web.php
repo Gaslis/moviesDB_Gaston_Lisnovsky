@@ -47,3 +47,5 @@ Route::post('/actors/guardarActor','ActorsController@store');
 // Generos
 
 Route::get('/genres/listaGeneros/','GenresController@listaG');
+
+Route::get('/genres/listadoXgenero/{id}','GenresController@show');

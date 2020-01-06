@@ -3,7 +3,7 @@
     @foreach ($genres as  $genre)
       <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
         <button type="button" class="btn btn-link">
-          <a href="/products/listadoXcategoria/{{ $genre->id }}" class="btn">{{ $genre->name }}</a>
+          <a href="/genres/listadoXgenero/{{ $genre->id }}" class="btn">{{ $genre->name }}</a>
         </button>
       </div>
     @endforeach

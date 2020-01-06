@@ -34,7 +34,8 @@ class GenresController extends Controller
 
     public function show($id)
     {
-        //
+      $genero = Genre::find($id);
+      return view('genres.listadoXgenero')->with('genero',$genero);
     }
 
 
