@@ -8,13 +8,12 @@
 <section class="col-12 col-sm-12 col-md-9 pt-5">
     <div class="row">
       @foreach ($peliculas as $pelicula)
-
         <div class="card venta col-12 col-sm-6 col-md-3 tarjetasSinborde pt-2" style=""><a href="/movies/detallePelicula/{{ $pelicula->id }}" class="btn3">
-          <img src="/storage/{{$pelicula->poster}}" class="card-img-top" alt="..." width="" height="300">
+          <img src="/storage/{{$pelicula->poster}}" class="card-img-top" alt="..." width="100" height="auto">
           <div class="card-body">
             <h5 class="card-title"><p>{{ $pelicula->title }}</p></h5>
             {{-- <p class="card-text"><p>{{ $producto->descripcion }}</p></p> --}}
-            <p class="card-text"><p>Id: {{ $pelicula->id }}</p></p>
+            {{-- <p class="card-text"><p>Id: {{ $pelicula->id }}</p></p> --}}
 
             {{-- <form class="" action="/carrito/agregar" method="post">
               @csrf

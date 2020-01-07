@@ -18,15 +18,15 @@
   </button>
   <div class="dropdown-menu">
     @auth
-      <a href="/partials/perfil/{{ Auth::id() }}">{{Auth::user()->name}}  <ion-icon name="person"></ion-icon></a>
+      <a href="/partials/perfil/{{ Auth::id() }}" >{{Auth::user()->name}}  <ion-icon name="person"></ion-icon></a>
 
     @else
-      <a href="{{ route('login') }}">Ingresá  <ion-icon name="person"></ion-icon></a>
+      <a href="{{ route('login') }}" class="dropdown-item">Ingresá  <ion-icon name="person"></ion-icon></a>
 
     @endauth
     @auth
 
-      <a class="" href="{{ route('logout') }}"
+      <a class="dropdown-item" href="{{ route('logout') }}"
         onclick="event.preventDefault();
         document.getElementById('logout-form').submit();">
         {{ __('Logout') }}
@@ -38,6 +38,9 @@
 
       <a href="{{ route('register') }}">Registrate  <ion-icon name="create"></ion-icon></a>
     @endauth
+    <a href="/movies/listaPeliculas/" class="dropdown-item">Peliculas</a>
+    <a href="/genres/listaGeneros/" class="dropdown-item">Generos</a>
+    <a href="/actors/listaActores/" class="dropdown-item">Actores</a>
   </div>
   {{-- @auth
     <a href="/carrito/index/">
@@ -57,6 +60,9 @@
   </nav>
   <div class="row barraRoja py-1">
     <nav class="col-6 primerNav">
+      <a href="/movies/listaPeliculas/">Peliculas</a>
+      <a href="/genres/listaGeneros/">Generos</a>
+      <a href="/actors/listaActores/">Actores</a>
       {{-- <a href="mailto: info@graficar.com.ar"><ion-icon name="mail"></ion-icon> contacto@graficar.com</a> --}}
       {{-- @if(Auth::id()===1) --}}
         {{-- <a href="/administrarProducto"><ion-icon name=""></ion-icon>Administrar Productos</a> --}}
