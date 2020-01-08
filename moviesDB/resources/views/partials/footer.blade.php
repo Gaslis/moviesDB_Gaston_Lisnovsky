@@ -2,9 +2,9 @@
   <section class="row fin  pt-5">
     <article class="col-12 col-sm-4 col-md-4 mb-5">
       <h4>Listados</h4>
-      <a href="/actors/listaActores/">Actores</a><br>
-      <a href="/movies/listaPeliculas/">Peliculas</a><br>
-      <a href="/genres/listaGeneros/">Generos</a><br>
+      <a href="/actors/listaActores/">Lista de actores</a><br>
+      <a href="/movies/listaPeliculas/">Lista de peliculas</a><br>
+      <a href="/genres/listaGeneros/">Lista de generos</a><br>
     </article>
     <article class="col-12 col-sm-4 col-md-4 mb-5">
       {{-- <h4>Contacto</h4>

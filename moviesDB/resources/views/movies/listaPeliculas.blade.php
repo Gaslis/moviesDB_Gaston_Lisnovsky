@@ -33,9 +33,9 @@
     </table>
     <div>
         {{$peliculas->links()}}
-        <a href="/" class="btn btn-primary">Volver</a>
+        {{-- <a href="/" class="btn btn-primary">Volver</a> --}}
     </div>
     </div>
-    
+
 
 @endsection
