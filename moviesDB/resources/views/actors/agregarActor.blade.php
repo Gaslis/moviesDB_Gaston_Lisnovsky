@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 @section('content')
-<h2 class="text-center mt-4">Agregrar producto</h2>
+<h2 class="text-center mt-4">Agregrar actor</h2>
 <div class="container-fluid">
   <div class="row mt-5">
      <div class="col-lg-8 offset-lg-2 mb-3">
@@ -12,7 +12,6 @@
                 @endforeach
             </ul>
         @endif
-
         <form action="/actors/guardarActor" method="POST" enctype="multipart/form-data">
         @csrf
             <div class="form-group">
@@ -43,11 +42,12 @@
                <label for="">Subir poster del producto</label>
                <input type="file" name="poster" value="">
              </div> --}}
-             <button class="btn btn-primary">Agregar actor</button>
+             <div class="text-center">
+               <button class="btn btn-primary ">Agregar actor</button>
+             </div>
       </form>
-      <a href="/">Volver</a>
     </div>
-
   </div>
 </div>
+
 @endsection

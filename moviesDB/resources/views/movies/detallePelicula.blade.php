@@ -15,7 +15,7 @@
             <h2 class="card-title">{{$pelicula->title}} <span class="badge"> {{$pelicula->rating}}</span></h2>
             <h4>Actores</h4>
             @foreach ($pelicula->actors as $actor)
-              <p class="card-text">{{$actor->first_name}} {{$actor->last_name}}</p>
+              <p class="card-text"><a href="/actors/detalleActor/{{$actor->id}}">{{$actor->first_name}} {{$actor->last_name}}</a></p>
             @endforeach
             <p class="card-text"><small class="text-muted">Duracion: {{$pelicula->length ?? ''}} min || <a href="/genres/listadoXgenero/{{$pelicula->genre->id }}">{{$pelicula->genre->name ?? ''}}</a> </small></p>
           </div>
@@ -28,6 +28,7 @@
 </main>
 {{-- </section> --}}
 @endsection
+
 
 
 {{-- <article class="product pt-5">
