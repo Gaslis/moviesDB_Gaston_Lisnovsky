@@ -32,10 +32,10 @@
         </tr>
         </tbody>
     </table>
-    <div>
+    <div class="text-center">
         {{$actores->links()}}
         <a href="/actors/agregrarActor/" class="btn btn-primary">Agregar Actor</a>
     </div>
-    </div>
+  </div>
 
 @endsection

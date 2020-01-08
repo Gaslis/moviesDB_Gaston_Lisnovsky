@@ -1,6 +1,10 @@
 * {
 	box-sizing: border-box;
 }
+.MDB{
+	color: black;
+	font-size: 45px;
+}
 body{
  font-family: 'Open Sans', sans-serif; Arial, sans-serif;
 }

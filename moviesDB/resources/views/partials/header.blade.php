@@ -1,7 +1,7 @@
 <header>
   <nav class="col 12 navbar navbar-light p-3">
     <div class=" col-sm-4 col-md-3">
-      <a href="/" class="btn"> movieDB
+      <a href="/" class="MDB"> movieDB
         {{-- <img src="/img/logo-graficar.png" alt="" class="logo"> --}}
       </a>
     </div>

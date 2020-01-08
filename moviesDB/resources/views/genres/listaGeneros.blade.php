@@ -17,7 +17,7 @@
             @foreach ($generos as $genero)
                 <tr>
                 <td>{{$genero->id}}</td>
-                <td>{{$genero->name}}</td>
+                <td><a href="/genres/listadoXgenero/{{ $genero->id }}" class="btn">{{ $genero->name }}</a></td>
 
                 {{-- <td><a href="/products/editarProducto/{{$genero->id}}"><ion-icon name="create"></ion-icon></a></td>
                 <td><a href="/products/eliminarProducto/{{$genero->id}}"><ion-icon name="trash"></ion-icon></td></a>
@@ -27,7 +27,7 @@
 
         </tbody>
     </table>
-    <div>
+    <div class="text-center">
         {{$generos->links()}}
         <a href="/" class="btn btn-primary">Volver</a>
     </div>
