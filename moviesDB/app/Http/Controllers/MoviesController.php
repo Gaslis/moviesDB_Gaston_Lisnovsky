@@ -11,7 +11,7 @@ class MoviesController extends Controller
 {
     public function index()
     {
-      $peliculas = Movie::paginate(12);
+      $peliculas = Movie::paginate(8);
       $genres = Genre::all();
       return view('welcome')->with('peliculas',$peliculas)->with('genres',$genres);
     }
