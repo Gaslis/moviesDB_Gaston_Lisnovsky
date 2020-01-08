@@ -1,52 +1,47 @@
 @extends('layouts.plantilla')
 @section('content')
+
     <h2 class="text-center py-4">{{$genero->name}}</h2>
 
-    <div class="container">
+
 
           <section id="cart">
             @foreach ($genero->movies as $movie)
-              <article class="product">
-                  <header>
 
-                      <a href="/movies/detallePelicula/{{$movie->id}}">
 
-                        {{-- <input type="hidden" name="id" value="{{$cart->id}}">
-                        <button type="submit" class="btn btn-primary" name="button">Eliminar</button> --}}
-                          <img src="/storage/{{$movie->poster}}" alt="">
-                          <h3>Ver detalle</h3>
-                      </a>
-                  </header>
+                <div class="container pt-5 mb-5 col-12 col-sm-12 col-md-9">
+                  <div class="row justify-content-center">
+                  {{-- </main> --}}
+                  <div class="card mb-3" style="width: 540px;">
+                    <div class="row no-gutters" >
+                      <div class="col-md-6">
+                        <img src="/storage/{{$movie->poster}}" class="card-img" alt="..." >
+                      </div>
+                      <div class="col-md-6">
+                        <div class="card-body">
+                          <h2 class="card-title">
+                            <a href="/movies/detallePelicula/{{ $movie->id }}" class="btn3">{{$movie->title}}
+                            </a>
+                              <span class="badge"> {{$movie->rating}}</span></h2>
+                          <h4>Actores</h4>
+                          @foreach ($movie->actors as $actor)
+                            <p class="card-text">{{$actor->first_name}} {{$actor->last_name}}</p>
+                          @endforeach
+                          <p class="card-text"><small class="text-muted">Duracion: {{$movie->length ?? ''}} min ||  <a href="/genres/listadoXgenero/{{$movie->genre->id }}">{{$movie->genre->name ?? ''}}</a> </small></p>
 
-                  <div class="content">
-
-                      <h1>{{$movie->title}}</h1>
-
-                      {{-- <p>{{$movie->descripcion}}</p> --}}
-
-                      {{-- <div title="You have selected this product to be shipped in the color yellow." style="top: 0" class="color yellow"></div>
-                      <div style="top: 43px" class="type small">XXL</div> --}}
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                </div>
 
-                  <footer class="content">
-                      {{-- <span class="qt-minus">-</span> --}}
-                      <span class="qt">Id: {{$movie->id}}</span>
-                      {{-- <span class="qt-plus">+</span> --}}
-                      <h2 class="full-price">
 
-                      </h2>
-
-                      {{-- <h2 class="price">Precio: $ --}}
-                        {{-- {{$producto->precio}} --}}
-                      {{-- </h2> --}}
-                  </footer>
-                {{-- @empty
-                  <h2>Su carrito se encuentra vacio</h2> --}}
-
-              </article>
+              </div>
             @endforeach
           </section>
 
-      </div>
+
+    </div>
+
 
 @endsection

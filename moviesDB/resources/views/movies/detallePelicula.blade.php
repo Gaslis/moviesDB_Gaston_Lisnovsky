@@ -5,27 +5,27 @@
   <div class="container pt-5 mb-5 col-12 col-sm-12 col-md-9">
     <div class="row justify-content-center">
     {{-- </main> --}}
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3" style="width: 540px;">
       <div class="row no-gutters" >
-        <div class="col-md-4">
+        <div class="col-md-6">
           <img src="/storage/{{$pelicula->poster}}" class="card-img" alt="..." >
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
           <div class="card-body">
             <h2 class="card-title">{{$pelicula->title}} <span class="badge"> {{$pelicula->rating}}</span></h2>
             <h4>Actores</h4>
             @foreach ($pelicula->actors as $actor)
               <p class="card-text">{{$actor->first_name}} {{$actor->last_name}}</p>
             @endforeach
-            <p class="card-text"><small class="text-muted">Duracion: {{$pelicula->length ?? ''}} min ||  {{$pelicula->genre->name ?? ''}} </small></p>
+            <p class="card-text"><small class="text-muted">Duracion: {{$pelicula->length ?? ''}} min || <a href="/genres/listadoXgenero/{{$pelicula->genre->id }}">{{$pelicula->genre->name ?? ''}}</a> </small></p>
           </div>
+
         </div>
       </div>
     </div>
   </div>
-
-
-  </main>
+</div>
+</main>
 {{-- </section> --}}
 @endsection
 
