@@ -1,4 +1,4 @@
-<header>
+<header class="sticky-top">
   <nav class="col 12 navbar navbar-light p-3">
     <div class=" col-sm-4 col-md-3">
       <a href="/" class="MDB"> movieDB
@@ -56,7 +56,7 @@
         <button type="submit" class="btn botonChango"><ion-icon name="cart"></ion-icon></button>
       </a>
     @endauth --}}
-</div>
+  </div>
   </nav>
   <div class="row barraRoja py-1">
     <nav class="col-6 primerNav">

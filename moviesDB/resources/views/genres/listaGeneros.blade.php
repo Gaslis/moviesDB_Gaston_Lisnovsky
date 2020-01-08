@@ -31,6 +31,6 @@
         {{$generos->links()}}
         <a href="/" class="btn btn-primary">Volver</a>
     </div>
-    </div>
+  </div>
 
 @endsection

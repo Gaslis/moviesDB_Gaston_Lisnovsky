@@ -1,9 +1,9 @@
 @extends('layouts.plantilla')
 @section('content')
-<h2 class="text-center py-4">Editar Pelicula {{ $peliculaEditar->title }}</h2>
-<div class="container-fluid">
-<div class="row mt-5">
-     <div class="col-lg-8 offset-lg-2 pb-4 ">
+<h2 class="text-center pt-4">Editar:  {{ $peliculaEditar->title }}</h2>
+<div class="container-fluid mb-4">
+<div class="row mt-4">
+     <div class="col-lg-8 offset-lg-2 pb-4">
          {{-- Si hay errores los muestro aquí--}}
         @if (count($errors->all())>0)
             <ul class="alert alert-danger">
@@ -42,9 +42,12 @@
                <label for="">Subir poster del producto</label>
                <input type="file" name="poster" value="">
              </div>
-             <button type="submit" class="btn btn-primary">Actualizar Producto</button>
+
         </form>
      </div>
-</div>
+   </div>
+   <div class="text-center">
+       <button type="submit" class="btn btn-primary">Actualizar Producto</button>
+   </div>
 </div>
 @endsection
