@@ -1,7 +1,7 @@
 <header class="sticky-top">
   <nav class="col 12 navbar navbar-light p-3">
     <div class=" col-sm-4 col-md-3">
-      <a href="/" class="MDB"> movieDB
+      <a href="/" class="MDB navbar-brand"> movieDB
         {{-- <img src="/img/logo-graficar.png" alt="" class="logo"> --}}
       </a>
     </div>
@@ -16,7 +16,7 @@
   <button type="button" class="btn btn-primary dropdown-toggle botonMenu menuMedia" data-toggle="dropdown">
     ☰
   </button>
-  <div class="dropdown-menu">
+  <div class="dropdown-menu text-center">
     @auth
       <a href="/partials/perfil/{{ Auth::id() }}" >{{Auth::user()->name}}  <ion-icon name="person"></ion-icon></a>
 
