@@ -47,7 +47,7 @@
      </div>
    </div>
    <div class="text-center">
-       <button type="submit" class="btn btn-primary">Actualizar Producto</button>
+       <button type="submit" class="btn btn-primary">Actualizar pelicula</button>
    </div>
 </div>
 @endsection
