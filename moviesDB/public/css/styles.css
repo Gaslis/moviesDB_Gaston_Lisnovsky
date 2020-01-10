@@ -752,7 +752,7 @@ span.price {
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .rowClaseClase {
     flex-direction: column-reverse;
   }
@@ -770,4 +770,4 @@ span.price {
 	background-color: rgba(255, 255, 255, 0);
 	color: black;
 	border: none;
-}
+} */
