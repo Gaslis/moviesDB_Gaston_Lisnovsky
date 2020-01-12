@@ -5,7 +5,7 @@
   <div class="container pt-5 mb-5 col-12 col-sm-12 col-md-9">
     <div class="row justify-content-center">
     {{-- </main> --}}
-    <div class="card mb-3" style="width: 540px;">
+    <div class="card mb-3" style="width: 700px;">
       <div class="row no-gutters" >
         <div class="col-md-6">
           <img src="/storage/{{$pelicula->poster}}" class="card-img" alt="..." >
