@@ -45,10 +45,6 @@ class ActorsController extends Controller
 
       $actor = new Actor($request->all());
 
-      // $ruta =  $request->file('poster')->store('public');
-      // $nombreArchivo = basename($ruta);
-      // $product->poster = $nombreArchivo;
-
       $actor->save();
       return redirect('/actors/listaActores');
     }
