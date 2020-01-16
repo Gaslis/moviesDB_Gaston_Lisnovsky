@@ -41,8 +41,8 @@ class MoviesController extends Controller
     {
       $peliculaEditar = Movie::find($id);
       $generos = Genre::all();
-      // $generoEditada = Genre::find($peliculaEditar->categoria_id) ,'generoEditada';
-      return view('movies.editarPelicula', compact('peliculaEditar', 'generos'));
+      $actores = Actor::all();
+      return view('movies.editarPelicula', compact('peliculaEditar', 'generos','actores'));
     }
 
     public function update(Request $request, $id)
@@ -52,7 +52,9 @@ class MoviesController extends Controller
       $peliculaEditar->rating = $request->input('rating');
       $peliculaEditar->awards = $request->input('awards');
       $peliculaEditar->genre_id = $request->input('genre_id');
-
+      $peliculaEditar->length = $request->input('length');
+      // $peliculaEditar->actors->actor_id = $request->input('actor_id');
+      // dd($peliculaEditar);
       if ($request->hasFile('poster')) {
         $ruta =  $request->file('poster')->store('public');
         $nombreArchivo = basename($ruta);
