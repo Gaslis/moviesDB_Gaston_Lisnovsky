@@ -13,6 +13,7 @@
         </ul>
       @endif
       <form action="/movies/guardarPeliculaEditada/{{ $peliculaEditar->id }}" method="POST" enctype="multipart/form-data">
+      @method("patch")
       @csrf
         <div class="form-group">
          <label for="title">Titulo</label>

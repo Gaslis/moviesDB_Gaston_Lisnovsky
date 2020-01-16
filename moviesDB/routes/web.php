@@ -30,7 +30,7 @@ Route::get('/movies/listaPeliculas/','MoviesController@listaP');
 
 Route::get('/movies/editarPelicula/{id}','MoviesController@edit');
 
-Route::post('/movies/guardarPeliculaEditada/{id}', 'MoviesController@update');
+Route::patch('/movies/guardarPeliculaEditada/{id}', 'MoviesController@update');
 
 
 // Actors
