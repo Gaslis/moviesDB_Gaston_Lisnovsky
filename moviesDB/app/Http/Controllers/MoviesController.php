@@ -53,7 +53,6 @@ class MoviesController extends Controller
       $peliculaEditar->awards = $request->input('awards');
       $peliculaEditar->genre_id = $request->input('genre_id');
       $peliculaEditar->length = $request->input('length');
-      // $peliculaEditar->actors->actor_id = $request->input('actor_id');
       // $peliculaEditar->actors()->attach('actor_id', $request->input('actor_id'));
       $peliculaEditar->actors()->attach($request->input('actor_id'));
       if ($request->hasFile('poster')) {
