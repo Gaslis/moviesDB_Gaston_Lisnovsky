@@ -47,7 +47,7 @@
              <div class="form-group">
                 <label for="actores">actores</label>
                 @foreach ($peliculaEditar->actors as $actor)
-                  <select class="form-control" name="actor_id[]" id="actor_id">
+                  <select class="form-control" name="actor_id" id="actor_id">
                   <option value="{{$actor->id}}" >{{$actor->first_name}} {{$actor->last_name}}</option>
                     @foreach ($actores as $actor)
                       <option value="{{($actor->id)}}">{{$actor->first_name}} {{$actor->last_name}}</option>
