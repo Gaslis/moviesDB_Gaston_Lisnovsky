@@ -9,6 +9,6 @@ class Actor extends Model
   protected $guarded = [];
 
   public function movies(){
-      return $this->belongsToMany(Movie::class);
+      return $this->belongsToMany(Movie::class)->withPivot('actor_id','movie_id');
   }
 }

@@ -42,7 +42,7 @@
             </select>
           </div>
 
-             {{-- <input type="hidden" name="actor_id[]" value="{{ $peliculaEditar->actor_id }}">
+             <input type="hidden" name="actor_id[]" value="{{ $peliculaEditar->actor_id }}">
              <div class="form-group">
                 <label for="actores">actores</label>
                 @foreach ($peliculaEditar->actors as $actor)
@@ -53,7 +53,7 @@
                     @endforeach
                   </select>
                 @endforeach
-             </div> --}}
+             </div>
 
           <div class="">
             <label for="">Subir poster del producto</label>

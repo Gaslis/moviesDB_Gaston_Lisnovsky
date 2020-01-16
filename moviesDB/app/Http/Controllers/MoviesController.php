@@ -54,7 +54,7 @@ class MoviesController extends Controller
       $peliculaEditar->genre_id = $request->input('genre_id');
       $peliculaEditar->length = $request->input('length');
       // $peliculaEditar->actors->actor_id = $request->input('actor_id');
-      // dd($peliculaEditar);
+      // $peliculaEditar->actors()->attach('actor_id', $request->input('actor_id'));
       if ($request->hasFile('poster')) {
         $ruta =  $request->file('poster')->store('public');
         $nombreArchivo = basename($ruta);
